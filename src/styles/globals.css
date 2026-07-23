@@ -127,6 +127,7 @@
     cursor: pointer;
     }
   html {
+    scroll-padding-top: 4rem;
     @apply font-sans;
     }
 }

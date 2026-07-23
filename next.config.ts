@@ -2,11 +2,11 @@ import type { NextConfig } from "next"
 
 const nextConfig: NextConfig = {
   experimental: {
-    useTypeScriptCli: true
+    useTypeScriptCli: true,
   },
   devIndicators: {
-    position: "bottom-right"
-  }
+    position: "bottom-right",
+  },
 }
 
 export default nextConfig
