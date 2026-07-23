@@ -1,0 +1,26 @@
+src/features/work/data/projects.ts
+  h_2bc691fceb4fe5 1-55
+src/features/home/config/content.ts
+  h_2bc691fceb4fe5 1-9,13,19-23,27,31,42,44,48
+src/features/home/about-preview.tsx
+  h_2bc691fceb4fe5 1-32
+src/features/work/types.ts
+  h_2bc691fceb4fe5 1-9
+src/features/home/shell.tsx
+  h_2bc691fceb4fe5 6
+src/features/home/featured-work/featured-work.tsx
+  h_2bc691fceb4fe5 1-46
+src/features/home/featured-work/featured-project.tsx
+  h_2bc691fceb4fe5 1-34
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.15",
+  "base_commit_sha": "828b1bdd672c934c0fb2dc2b2005fb38c8771796",
+  "prompts": {},
+  "humans": {
+    "h_2bc691fceb4fe5": {
+      "author": "Jason Connolly <jcodog@jconet.co.uk>"
+    }
+  }
+}
