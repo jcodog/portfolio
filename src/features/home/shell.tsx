@@ -1,10 +1,12 @@
 import { IconBrandGithub } from "@tabler/icons-react"
 
 import { SiteHeader } from "@/components/layout/site-header"
+import { AboutPreview } from "@/features/home/about-preview/about-preview"
+import { ContactCta } from "@/features/home/contact-cta/contact-cta"
 import { homeContent } from "@/features/home/config/content"
-import { Hero } from "@/features/home/hero/hero"
 import { FeaturedWork } from "@/features/home/featured-work/featured-work"
-import { AboutPreview } from "@/features/home/about-preview"
+import { Hero } from "@/features/home/hero/hero"
+import { OpenSourcePreview } from "@/features/home/open-source-preview/open-source-preview"
 
 export const HomeShell = () => {
   const { header } = homeContent
@@ -25,9 +27,9 @@ export const HomeShell = () => {
       <main>
         <Hero />
         <FeaturedWork />
-        {/* <OpenSourcePreview /> */}
+        <OpenSourcePreview />
         <AboutPreview />
-        {/* <ContactCta /> */}
+        <ContactCta />
       </main>
     </>
   )

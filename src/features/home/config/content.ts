@@ -1,12 +1,3 @@
-export type HomeProject = Readonly<{
-  title: string
-  summary: string
-  contribution: string
-  technologies: readonly string[]
-  href: string
-  year: string
-}>
-
 export const homeContent = {
   header: {
     brand: {
@@ -58,26 +49,21 @@ export const homeContent = {
     title: "Engineering across product and production.",
     description:
       "I’m a DevOps engineer and software developer behind JCoNet LTD. My work spans user-facing products, backend systems, automation, infrastructure and the operational work required to keep software reliable.",
-  },
-  work: {
-    eyebrow: "Selected work",
-    title: "Products, systems and infrastructure.",
-    projects: [
+    experience: [
       {
-        title: "Cleo v3",
-        summary:
-          "A ground-up rewrite of a multi-platform assistant and community management product.",
-        contribution:
-          "Product architecture, full-stack development, infrastructure and operations.",
-        technologies: [
-          "Next.js",
-          "TypeScript",
-          "Convex",
-          "Discord.js",
-          "GitHub Actions",
-        ],
-        href: "/work/cleo-v3",
-        year: "2026",
+        period: "2021–2023",
+        organisation: "Siemens",
+        role: "Junior Software Developer and DevOps Engineer",
+      },
+      {
+        period: "2019–2021",
+        organisation: "North Kesteven District Council",
+        role: "IT Support",
+      },
+      {
+        period: "2018–present",
+        organisation: "JCoNet LTD",
+        role: "Founder and product engineer",
       },
     ],
   },
@@ -86,5 +72,17 @@ export const homeContent = {
     title: "Have a product, platform or infrastructure problem?",
     description:
       "I’m open to conversations about software development, DevOps, automation and technical product work.",
+    links: [
+      {
+        label: "Discuss a project on Upwork",
+        href: "https://www.upwork.com/freelancers/~0116d70440185dfa1d",
+        external: true,
+      },
+      {
+        label: "View GitHub",
+        href: "https://github.com/jcodog",
+        external: true,
+      },
+    ],
   },
 } as const
