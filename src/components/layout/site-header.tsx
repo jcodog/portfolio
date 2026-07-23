@@ -1,34 +1,73 @@
+import type { ReactNode } from "react"
 import Link from "next/link"
-import { IconBrandGithub } from "@tabler/icons-react"
 
 import { buttonVariants } from "@/components/ui/button"
-import { cn } from "@/lib/utils"
 
-const navigation = [
-  {
-    label: "Work",
-    href: "#work",
-  },
-  {
-    label: "About",
-    href: "#about",
-  },
-  {
-    label: "Contact",
-    href: "#contact",
-  },
-] as const
+type SiteHeaderLink = Readonly<{
+  label: string
+  href: string
+  external?: boolean
+}>
 
-export const SiteHeader = () => {
+type SiteHeaderAction = SiteHeaderLink &
+  Readonly<{
+    icon: ReactNode
+  }>
+
+type SiteHeaderProps = Readonly<{
+  brand: SiteHeaderLink
+  navigation?: readonly SiteHeaderLink[]
+  actions?: readonly SiteHeaderAction[]
+}>
+
+type HeaderLinkProps = Readonly<{
+  item: SiteHeaderLink
+  className: string
+  children: ReactNode
+  ariaLabel?: string
+}>
+
+const HeaderLink = ({
+  item,
+  className,
+  children,
+  ariaLabel,
+}: HeaderLinkProps) => {
+  if (item.external) {
+    return (
+      <a
+        href={item.href}
+        target="_blank"
+        rel="noreferrer"
+        aria-label={ariaLabel}
+        className={className}
+      >
+        {children}
+      </a>
+    )
+  }
+
+  return (
+    <Link href={item.href} aria-label={ariaLabel} className={className}>
+      {children}
+    </Link>
+  )
+}
+
+export const SiteHeader = ({
+  brand,
+  navigation = [],
+  actions = [],
+}: SiteHeaderProps) => {
   return (
     <header className="fixed inset-x-0 top-0 z-50 border-b border-border/50 bg-background/70 backdrop-blur-xl">
       <div className="mx-auto flex h-16 w-full max-w-7xl items-center justify-between px-6 lg:px-8">
-        <Link
-          href="/"
+        <HeaderLink
+          item={brand}
           className="font-semibold tracking-tight transition-opacity hover:opacity-70"
         >
-          Jason
-        </Link>
+          {brand.label}
+        </HeaderLink>
 
         <nav
           aria-label="Primary navigation"
@@ -36,35 +75,32 @@ export const SiteHeader = () => {
         >
           <div className="hidden items-center sm:flex">
             {navigation.map((item) => (
-              <a
+              <HeaderLink
                 key={item.href}
-                href={item.href}
-                className={cn(
-                  buttonVariants({
-                    variant: "ghost",
-                    size: "sm",
-                  })
-                )}
+                item={item}
+                className={buttonVariants({
+                  variant: "ghost",
+                  size: "sm",
+                })}
               >
                 {item.label}
-              </a>
+              </HeaderLink>
             ))}
           </div>
 
-          <a
-            href="https://github.com/jcodog"
-            target="_blank"
-            rel="noreferrer"
-            aria-label="View Jason on GitHub"
-            className={cn(
-              buttonVariants({
+          {actions.map((item) => (
+            <HeaderLink
+              key={item.href}
+              item={item}
+              ariaLabel={item.label}
+              className={buttonVariants({
                 variant: "ghost",
                 size: "icon",
-              })
-            )}
-          >
-            <IconBrandGithub aria-hidden="true" />
-          </a>
+              })}
+            >
+              {item.icon}
+            </HeaderLink>
+          ))}
         </nav>
       </div>
     </header>
