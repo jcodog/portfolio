@@ -1,8 +1,6 @@
 import type { ReactNode } from "react"
 import Link from "next/link"
 
-import { buttonVariants } from "@/components/ui/button"
-
 type SiteHeaderLink = Readonly<{
   label: string
   href: string
@@ -60,28 +58,25 @@ export const SiteHeader = ({
   actions = [],
 }: SiteHeaderProps) => {
   return (
-    <header className="fixed inset-x-0 top-0 z-50 border-b border-border/50 bg-background/70 backdrop-blur-xl">
-      <div className="mx-auto flex h-16 w-full max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
+    <header className="fixed inset-x-0 top-0 z-50 border-b border-border/60 bg-background/85 backdrop-blur-xl">
+      <div className="mx-auto flex h-16 w-full max-w-[90rem] items-center justify-between px-4 sm:px-6 lg:px-10">
         <HeaderLink
           item={brand}
-          className="font-semibold tracking-tight transition-opacity hover:opacity-70"
+          className="text-base font-semibold tracking-tight transition-colors hover:text-primary"
         >
           {brand.label}
         </HeaderLink>
 
         <nav
           aria-label="Primary navigation"
-          className="flex items-center gap-1"
+          className="flex min-w-0 items-center gap-0.5"
         >
-          <div className="flex items-center">
+          <div className="flex min-w-0 items-center overflow-x-auto">
             {navigation.map((item) => (
               <HeaderLink
                 key={item.href}
                 item={item}
-                className={buttonVariants({
-                  variant: "ghost",
-                  size: "sm",
-                })}
+                className="shrink-0 px-2 py-2 text-xs font-medium text-muted-foreground transition-colors hover:text-foreground sm:px-3 sm:text-sm"
               >
                 {item.label}
               </HeaderLink>
@@ -93,10 +88,7 @@ export const SiteHeader = ({
               key={item.href}
               item={item}
               ariaLabel={item.label}
-              className={buttonVariants({
-                variant: "ghost",
-                size: "icon",
-              })}
+              className="ml-1 inline-flex size-9 shrink-0 items-center justify-center border-l border-border pl-1 text-muted-foreground transition-colors hover:text-foreground [&_svg]:size-4"
             >
               {item.icon}
             </HeaderLink>

@@ -7,25 +7,30 @@ type FeaturedProjectProps = Readonly<{
 
 export const FeaturedProject = ({ project, index }: FeaturedProjectProps) => {
   return (
-    <article className="grid gap-5 py-8 md:grid-cols-[5rem_minmax(0,1fr)] lg:grid-cols-[7rem_minmax(0,1.2fr)_minmax(18rem,0.8fr)] lg:gap-8 lg:py-10">
-      <p className="font-mono text-xs text-muted-foreground">
-        {String(index + 1).padStart(2, "0")} / {project.year}
-      </p>
+    <article className="grid gap-7 py-11 lg:grid-cols-12 lg:gap-8 lg:py-14">
+      <div className="flex items-baseline gap-3 lg:col-span-2 lg:block">
+        <p className="font-mono text-sm text-primary">
+          {String(index + 1).padStart(2, "0")}
+        </p>
+        <p className="font-mono text-xs text-muted-foreground lg:mt-2">
+          {project.year}
+        </p>
+      </div>
 
-      <div>
-        <h3 className="text-2xl font-semibold tracking-tight sm:text-3xl">
+      <div className="lg:col-span-5">
+        <h3 className="text-3xl font-semibold tracking-tight sm:text-4xl">
           {project.title}
         </h3>
 
-        <p className="mt-3 max-w-xl leading-7 text-muted-foreground">
+        <p className="mt-4 max-w-xl text-base leading-7 text-muted-foreground">
           {project.summary}
         </p>
       </div>
 
-      <div className="md:col-start-2 lg:col-start-auto">
-        <p className="leading-7">{project.contribution}</p>
+      <div className="lg:col-span-5 lg:border-l lg:border-border lg:pl-8">
+        <p className="text-lg leading-8">{project.contribution}</p>
 
-        <p className="mt-3 text-sm leading-6 text-muted-foreground">
+        <p className="mt-6 text-sm leading-6 text-muted-foreground">
           {project.technologies.join(" · ")}
         </p>
       </div>

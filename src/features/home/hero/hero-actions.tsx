@@ -6,10 +6,10 @@ export const HeroActions = () => {
   const { actions } = homeContent.hero
 
   return (
-    <div className="flex flex-wrap gap-x-6 gap-y-3 text-sm font-medium">
+    <div className="flex flex-wrap gap-x-7 gap-y-4 text-sm font-medium">
       <a
         href={actions.primary.href}
-        className="group inline-flex items-center gap-2 hover:text-primary"
+        className="group inline-flex items-center gap-2 border-b border-foreground/40 pb-1 transition-colors hover:border-primary hover:text-primary"
       >
         {actions.primary.label}
         <IconArrowDown
@@ -22,7 +22,7 @@ export const HeroActions = () => {
         href={actions.github.href}
         target="_blank"
         rel="noreferrer"
-        className="group inline-flex items-center gap-2 hover:text-primary"
+        className="group inline-flex items-center gap-2 border-b border-transparent pb-1 text-muted-foreground transition-colors hover:border-primary hover:text-primary"
       >
         {actions.github.label}
         <IconArrowUpRight
