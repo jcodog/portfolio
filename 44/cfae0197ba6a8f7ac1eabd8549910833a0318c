@@ -1,0 +1,24 @@
+src/features/home/config/content.ts
+  h_2bc691fceb4fe5 1-18
+src/features/home/hero/hero.tsx
+  h_2bc691fceb4fe5 1-38
+src/components/layout/site-header.tsx
+  h_2bc691fceb4fe5 1-69
+src/features/home/shell.tsx
+  h_2bc691fceb4fe5 1-15
+src/features/home/hero/hero-actions.tsx
+  h_2bc691fceb4fe5 1-35
+src/app/page.tsx
+  h_2bc691fceb4fe5 1
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.15",
+  "base_commit_sha": "44cfae0197ba6a8f7ac1eabd8549910833a0318c",
+  "prompts": {},
+  "humans": {
+    "h_2bc691fceb4fe5": {
+      "author": "Jason Connolly <jcodog@jconet.co.uk>"
+    }
+  }
+}
