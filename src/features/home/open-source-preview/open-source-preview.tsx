@@ -19,7 +19,7 @@ export const OpenSourcePreview = () => {
       aria-labelledby="open-source-title"
       className="border-t border-border"
     >
-      <div className="mx-auto grid w-full max-w-7xl gap-10 px-6 py-24 lg:grid-cols-[minmax(0,0.8fr)_minmax(0,2fr)] lg:px-8 lg:py-28">
+      <div className="mx-auto grid w-full max-w-7xl gap-10 px-6 py-20 lg:grid-cols-[minmax(0,0.8fr)_minmax(0,2fr)] lg:px-8 lg:py-24">
         <div>
           <p className="text-sm font-medium tracking-wide text-primary">
             Open source

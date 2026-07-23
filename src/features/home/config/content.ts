@@ -33,6 +33,11 @@ export const homeContent = {
     title: "I build software products and the systems that keep them running.",
     description:
       "I'm Jason, the developer behind JCoNet LTD. I work across product engineering, automation, infrastructure and production operations.",
+    focus: [
+      "Product engineering",
+      "Automation and delivery",
+      "Infrastructure and operations",
+    ],
     actions: {
       primary: {
         label: "View selected work",

@@ -11,7 +11,7 @@ export const ContactCta = () => {
       aria-labelledby="contact-title"
       className="border-t border-border bg-foreground text-background"
     >
-      <div className="mx-auto w-full max-w-7xl px-6 py-24 lg:px-8 lg:py-28">
+      <div className="mx-auto w-full max-w-7xl px-6 py-20 lg:px-8 lg:py-24">
         <p className="text-sm font-medium tracking-wide text-background/65">
           {contact.eyebrow}
         </p>
@@ -49,7 +49,7 @@ export const ContactCta = () => {
           </div>
         </div>
 
-        <div className="mt-20 flex flex-col gap-2 border-t border-background/20 pt-6 text-sm text-background/55 sm:flex-row sm:items-center sm:justify-between">
+        <div className="mt-16 flex flex-col gap-2 border-t border-background/20 pt-6 text-sm text-background/55 sm:flex-row sm:items-center sm:justify-between">
           <p>Jason · JCoNet LTD</p>
           <p>Software, infrastructure and product engineering</p>
         </div>
